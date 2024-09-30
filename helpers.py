@@ -1,3 +1,4 @@
+import schedule
 import mysql.connector
 from mysql.connector import Error
 from datetime import datetime
@@ -43,6 +44,8 @@ def greet_all_users(bot):
 
 # 현재 시간 전송
 def dev_run(bot):
+    global browser, conn, cursor
+
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     message = f"현재 시간은 {current_time}입니다."
     

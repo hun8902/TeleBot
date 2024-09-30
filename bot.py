@@ -21,8 +21,11 @@ if __name__ == "__main__":
     greet_all_users(bot)  # 모든 사용자에게 인사말 전송
 
     try:
+        
         bot.add_message_handler({"function": send_welcome, "filters": {"commands": ['start']}})
-        bot.add_message_handler({"function": handle_message, "filters": {"func": lambda message: True}})
+        bot.add_message_handler({"function": lambda message: handle_message(message, bot), "filters": {"func": lambda message: True}})
+
+        #bot.add_message_handler({"function": handle_message, "filters": {"func": lambda message: True}})
         bot.polling(none_stop=True)
 
         # 스케줄 설정
