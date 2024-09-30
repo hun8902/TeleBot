@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+.idea/
+
+
+# 환경설정 파일
+config.py
+.venv/
+
+vendor/
+download/
